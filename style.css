@@ -125,3 +125,28 @@ h1 {
   color: #666666;
   pointer-events: none;
 }
+
+/* Media queries */
+@media (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+  .btn {
+    padding: 1.5rem 3rem;
+  }
+}
+@media (max-width: 660px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (max-width: 465px) {
+  html {
+    font-size: 40%;
+  }
+}
+@media (max-width: 370px) {
+  html {
+    font-size: 30%;
+  }
+}
