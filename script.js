@@ -65,5 +65,8 @@ function newGame() {
 
 btnAgain.addEventListener('click', newGame);
 btnCheck.addEventListener('click', checkGuess);
+guess.addEventListener('keydown', e => {
+  if (e.key === 'Enter') checkGuess();
+});
 
 newGame();
