@@ -9,7 +9,6 @@ const message = document.querySelector('.main__message');
 const highscore = document.querySelector('.main__highscore');
 const score = document.querySelector('.main__score');
 
-let gameover = false;
 let scoreNum = 20;
 let highscoreNum = 0;
 let num;
@@ -30,7 +29,6 @@ function checkGuess() {
     body.style.backgroundColor = '#60b347';
     score.textContent = scoreNum;
     getHighscore();
-    gameover = true;
     btnCheck.disabled = true;
   } else if (guessNum !== num) {
     message.textContent = guessNum < num ? 'Too low!' : 'Too high';
@@ -66,7 +64,9 @@ function newGame() {
 btnAgain.addEventListener('click', newGame);
 btnCheck.addEventListener('click', checkGuess);
 guess.addEventListener('keydown', e => {
-  if (e.key === 'Enter') checkGuess();
+  if (e.key === 'Enter' && btnCheck.disabled === false) {
+    checkGuess();
+  }
 });
 
 newGame();
