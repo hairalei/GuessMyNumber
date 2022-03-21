@@ -56,6 +56,7 @@ function newGame() {
   number.textContent = '?';
   body.style.backgroundColor = '#000';
   guess.value = '';
+  message.textContent = 'Start guessing...';
   scoreNum = 20;
   score.textContent = scoreNum;
   btnCheck.disabled = false;
